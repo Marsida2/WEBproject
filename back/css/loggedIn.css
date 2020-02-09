@@ -1,0 +1,237 @@
+body {
+	background-color: #CCE3E5;
+	font-family: 'Quicksand-Regular';
+}
+
+.top_bar {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	height: 45px;
+	min-width: 1050px;
+	background-color: #3296C3;
+	border-bottom: 1px solid #071012;
+	color: white;
+	margin: 0 0 10px 0;
+	display: inline-flex;
+}
+
+.logo a {
+	font-family: 'Quicksand-Bold';
+	margin-left: 15px;
+	font-size: 150%;
+	position: relative;
+	top: 5px;
+	text-decoration: none;
+	text-shadow:  0.5px 0.5px 0px #07A012 ;
+	color: white;
+}
+
+
+nav {
+	position: absolute;
+	right: 0%;
+	padding: 5px;
+	margin: 5px;
+}
+
+nav a {
+	position: relative;
+	text-decoration: none;
+	color: white;
+	margin: 0 10px 0 10px;
+}
+
+.top_bar a:hover {
+	color: #071012;
+}
+
+#emriNav {
+	text-decoration: none;
+	color: #071012;
+}
+
+
+.wrapper {
+	position: relative;
+	top: 50px;
+	margin: 0 auto;
+	padding: 0 10px;
+	width: 80%;
+	min-width: 950px;
+}
+
+.fotoProfili {
+	width: 100px;
+	position: relative;
+	left: 50%;
+	margin: 15px -50px;
+}
+
+.column {
+	background-color: #ffff;
+	padding: 15px;
+	margin-right: 20px;
+	margin-top: 6px;
+	border: 1px solid #071012;
+	border-radius: 6px;
+}
+
+.teDhenaPersonale {
+	width: 25%;
+	text-align: left;
+	float: left;
+}
+
+.postimet {
+	width: 70%;
+	float: right;
+	padding: 35px;
+	background-color: #eff5f5;
+}
+
+.btnShto {
+	border-radius: 5px;
+	margin: 3px;
+}
+
+input.btnShto.pink {
+	background-color: #7D0951;
+	color: white;
+}
+
+.posti {
+	border-radius: 4px;
+	padding: 20px;
+    margin: 45px auto;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.7);
+    background-color: white;
+}
+
+#frmShto {
+	display: none;
+	margin-bottom: -10px;
+}
+
+.fotoPosti {
+	max-width: 500px;
+	max-height: 400px;
+   	margin: 10px auto;
+}
+
+.titullPosti {
+	text-shadow: 1px 1px 3px #481741;
+    font-size: 2.2rem;
+    font-family: 'Quicksand-Bold';
+}
+
+.permbajtjePosti{
+	font-size: 1.6rem;
+}
+
+.postues{
+	margin-top: -8px;
+    font-style: italic;
+    text-shadow: 1px 1px 3px #481741;
+}
+.paraPostues {
+	text-shadow: none;
+	font-style: normal;
+}
+
+span.date {
+	margin-left: 6px;
+	font-style: normal;
+    font-size: smaller;
+    text-shadow: none;
+}
+
+.komenti {
+	width: 34rem;
+    border-radius: 5px;
+    margin: 2px;
+    margin-left: 0px;
+
+    outline: 0;
+}
+
+.komentet {
+	background-color: rgba(0,0,0,0.1);
+    margin: 0px;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+
+.komentetReja form{
+	display: inline-flex;
+}
+
+
+#kerko_inputin {
+	height: 28px;
+    width: 150px;
+    float: left;
+    margin: 7px;
+    margin-left: 20px;
+    border: thin solid black;
+    border-radius: 6px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+   	outline: 0; /*sherben per te hequr vijezimin default te inputit kur klikohet mbi te*/
+    color: black;
+    padding: 8px;
+    transition: width 1s;
+}
+
+#kerko_inputin:active .fa-search{
+	color: black;
+}
+
+button, input[type=submit] {
+	background-color: white;
+}
+
+input[type=text] {
+	padding-left: 8px;
+}
+
+
+.btnKerkimi {
+	width: 37px;
+    height: 28px;
+    background-color: #e5e5e5;
+    float: left;
+    margin: 7px;
+    margin-left: -8px;
+    border: thin solid black;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+#kerko_inputin:focus {
+	width: 190px;
+}
+
+#kerko_inputin:focus .btnKerkimi {
+	background-color: black;
+}
+
+.miniFoto {
+	max-width: 50px;
+	max-height: 50px;
+	border-radius: 500px;
+	border: 1px solid black;
+	padding: 3px;
+	background-color: white;
+}
+
+.tabeleRezultatesh td {
+	margin: 20px;
+	padding: 10px;
+	font-size: 1.6rem;
+	font-weight: 700;
+}

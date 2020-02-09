@@ -1,7 +1,6 @@
 <?php
 
-
-	$gabimLogin=false;//do sherbeje per te treguar true nese ka gabim ne te dhenat e loginit
+	$gabimLogin=false;//do tregoje nese ka gabim ne te dhenat e loginit ne html
 
 	if (isset($_POST['hyr'])) {
 
@@ -12,13 +11,13 @@
 
 		$query_kerkimi="select * from perdorues where username='$username' and fjalekalimi='$fjalekalimi'";
 		$result=mysqli_query($connection, $query_kerkimi);
-		if(mysqli_num_rows($result)==1){
-			//ekziston ky perdorues ne databaze...
-			//updato statusin e perdoruesit ne aktiv
-			$query_updatimi="update perdorues set user_aktiv='po' where username='$username'";
-			mysqli_query($connection, $query_updatimi);
-			$gabimLogin=false;
-			header("Location: indexLogged.php");//te con ne faqen main te loguar
-		}else $gabimLogin=true;//kontrollohet brenda tagut te inputit
+		$num_rows=mysqli_num_rows($result);
+		if($num_rows==1){
+			
+			$row=mysqli_fetch_array($result);
+			$_SESSION['id_perdorues']=$row['id_perdorues'];
+	
+			header("Location: indexIn.php");//te con ne faqen main te loguar
+		}else $gabimLogin=true;
 	}
 ?>

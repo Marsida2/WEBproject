@@ -1,0 +1,175 @@
+
+body, html {
+  height: 100%;
+}
+
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0d4754;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #071012;
+}
+
+.labelat, .inputet {
+	padding-left: 20px;
+	float: left;
+	width: 25%;
+}
+
+.labelat {
+	text-align: right;
+}
+
+/*blloku ose eshte te logini eshte divi per /ose regjistrohu///po fshi float-in*/
+.bllokuOse {
+	clear: both;
+}
+
+.gjinia {
+	float: left;
+}
+
+.centerDiv {
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 15%;
+  margin: auto;
+  width: 30%;
+  background-color: #0d4754;
+  opacity: 0.7;
+  padding: 10px;
+}
+
+hr {
+	border: 0.2px solid #0d4754;
+	width: 80%;
+	opacity: 0.7;
+}
+
+
+.centerDiv:hover hr {
+	border: 0.2px solid white;
+	opacity: 1;
+}
+
+
+
+
+
+/* stile per faqen main*/
+  #foto1 {
+    z-index: -1;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 100%;
+    }
+
+
+.DivMain {
+  height: 550px;
+  padding: 20px;
+  margin: 30px;
+}
+
+#titulli {
+  float: left;
+  color:;
+  width: 50%;
+  text-align: center;
+  font-family: arial;
+  font-size: 20px;
+  margin-top: -20px;
+}
+
+#titulli h1:hover{
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px  #071012, 0 0 5px darkblue;
+}
+
+#titulli p:hover {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px  #071012, 0 0 5px darkblue;
+}
+
+
+#Pyetjet5 {
+  float: right;
+  width: 30%;
+  padding: 10px;
+  font-family: arial;
+  font-size: 20px;
+}
+
+
+#Pyetjet5 a {
+  text-decoration: none;
+  color: white;
+  font-family: arial;
+}
+
+#Pyetjet5 div {
+  width: 100px;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: #0d4754; 
+  text-align: center;
+  opacity: 0.7;
+  transition: all 0.7s;
+}
+
+#Pyetjet5 div:hover {
+  width: 200px;
+  opacity: 1;
+  font-size: 22px;
+  background-color: #071012;
+   
+}
+
+#Pyetjet5 div:hover a{
+    text-shadow: 1px 1px 2px black, 0 0 25px white , 0 0 5px lightblue;
+}
+
+.divMainposhteFotos{
+    height: 300px;
+    padding: 20px;
+    margin: 30px;
+}
+
+#cfare, #ku, #perse {
+  background-color: white;
+}
+
+.divMainposhteFotos img {
+    float: right;
+    height: 250px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.divMainposhteFotos img.left{
+    float: left;
+    height: 250px;
+    padding: 20px;
+    margin: 10px;
+}
+
