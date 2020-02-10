@@ -13,7 +13,7 @@ require 'includes/konfirmoMesues.php';
 				$num=mysqli_num_rows($result);
 
 
-				echo "<table border='1'><tr><thead><th>Emri</th><th>Gjinia</th><th>Datelindja</th><th>Konfirmo</th><th>Anullo</th></thead><tbody>";
+				echo "<table class='tbl'><tr><thead><th>Emri</th><th>Gjinia</th><th>Datelindja</th><th>Konfirmo</th><th>Anullo</th></thead><tbody>";
 				while($row=mysqli_fetch_array($result))
 					echo "<tr><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td><a href='adminKonfirmoMesues.php?idKonfirmo=".$row[0]."'>Konfirmo</a></td><td><a href='adminKonfirmoMesues.php?idAnullo=".$row[0]."'>Anullo</a></td></tr>";
 				echo "</tbody></table>";

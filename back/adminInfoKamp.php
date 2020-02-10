@@ -14,7 +14,7 @@ require 'includes/headerIn.php';
 				$num=mysqli_num_rows($result);
 
 
-				echo "<table border='1'><tr><thead><th>Grupi</th><th>Anëtarët aktuale</th></thead><tbody>";
+				echo "<table class='tbl'><tr><thead><th>Grupi</th><th>Anëtarët aktuale</th></thead><tbody>";
 				while($row=mysqli_fetch_array($result))
 					echo "<tr><td>".$row[1]."</td><td>".$row[2]."</td></tr>";
 				echo "</tbody></table>";

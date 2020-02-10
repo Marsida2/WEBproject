@@ -117,12 +117,7 @@ require 'includes/loginHandler.php';
 
 			<div class="inputet">
 				<p></p>
-				<p><input type="text" name="username" size="20" disabled value="
-					<?php 
-						if(isset($_POST['emri'])) echo "vendosur"; else echo "gabim";
-						require 'includes/usernameGen.php';
-						echo $username;
-					?>"></p>
+				<p><input type="text" name="username" size="20" disabled value="Shiko pasi të regjistrohesh"></p>
 				<p><input type="text" placeholder="1111-2222-3333-4444" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required></p>
 				<p><input type="password" size="5"></p> 
 			</div>

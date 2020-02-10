@@ -229,3 +229,7 @@ input[type=text] {
 	font-size: 1.6rem;
 	font-weight: 700;
 }
+
+.tbl td, th {
+	padding-left: 15px;
+}
