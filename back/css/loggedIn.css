@@ -185,9 +185,6 @@ span.date {
     transition: width 1s;
 }
 
-#kerko_inputin:active .fa-search{
-	color: black;
-}
 
 button, input[type=submit] {
 	background-color: white;
@@ -216,9 +213,6 @@ input[type=text] {
 	width: 190px;
 }
 
-#kerko_inputin:focus .btnKerkimi {
-	background-color: black;
-}
 
 .miniFoto {
 	max-width: 50px;

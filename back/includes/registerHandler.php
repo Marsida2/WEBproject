@@ -35,7 +35,7 @@
 		$grupi=$_POST['grupi'];
 
 		//shtimi ne databaze
-		$query_shtimi="insert into perdorues values ('', '$emri', '$mbiemri', '$datelindja', '$gjinia', '$email', '$username', '$fjalekalimi', '$roli', '1', '$fotoProfili', '$grupi')";
+		$query_shtimi="insert into perdorues values ('', '$emri', '$mbiemri', '$datelindja', '$gjinia', '$email', '$username', '$fjalekalimi', '$roli', '$fotoProfili', '$grupi')";
 		$result=mysqli_query($connection, $query_shtimi);
 
 		$query_leximi="select id_perdorues from perdorues where email='$email'";

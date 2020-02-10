@@ -10,18 +10,21 @@ require 'includes/shtoKoment.php';
 <!-- kolona e dyte me vendin e postimeve -->
 	<div class="postimet column">
 
-<!-- divi ku behet shtimi i posteve te reja vetem per mesuesin -->
-	
+<!-- divi ku behet shtimi i posteve te reja vetem per mesuesin id_roli 2 dhe admin id_roli 4 -->
+
+	<?php if($perdorues['id_roli']==2 || $perdorues['id_roli']==4){ ?>
+
 		<div class="shtoPostim">
 			<p><button class="btnShto" id="shtoPost" type="button"><i class="fa fa-plus-square fa-lg"></i> Shto postim</button></p>
 
-			<form method="post" action="indexIn.php?vl=0" enctype="multipart/form-data" id="frmShto">
+			<form method="post" action="#" enctype="multipart/form-data" id="frmShto">
 					<p><input type="text" name="titulli" id="titulli" size="50" required placeholder="Titulli"  autocomplete="off"></p>
-					<p><textarea rows="4" cols="60" name="permbajtja" id="permbajtja" placeholder="Permbajtja e postit"></textarea>></p>
+					<p><textarea rows="4" cols="60" name="permbajtja" id="permbajtja" placeholder="Përmbajtja e postit"></textarea>></p>
 					<p><input type="file" name="fileUpload" id="fileUpload"></p>
 					<p><input class="btnShto pink" type="submit" name="posto" value="Posto"></p>
 			</form>
 		</div>
+	<?php } ?>
 
 <!-- divi ku do shfaqet secili prej posteve sipas kohes se postimit -->
 		<div class="shfaqPostim">
@@ -29,7 +32,7 @@ require 'includes/shtoKoment.php';
 					$qry="select * from poste where id_grupi='".$perdorues['id_grupi']."' order by id_posti desc";
 					$result=mysqli_query($connection, $qry);
 					$nr=mysqli_num_rows($result);
-						if($nr==0) echo "<p><em>Nuk ka poste per te shfaqur</em></p>";
+						if($nr==0) echo "<p><em>Nuk ka poste për të shfaqur</em></p>";
 						else{	
 							for($i=0; $i<$nr; $i++){
 								echo "<div class='posti'>";	
@@ -75,8 +78,8 @@ require 'includes/shtoKoment.php';
 									<div class='komentetReja'>
 										<form action='#' method='post'><p>
 											<input type='hidden' name='id_posti' value='$id_posti'>
-											<input type='text' name='komenti' class='komenti' placeholder=' Shkruaj nje pergjigje...' autocomplete='off'>
-											<button type='submit' class='btnShto' name='shtoKoment'><i class='fa fa-plus-square fa-lg'></i> Pergjigju</button>
+											<input type='text' name='komenti' class='komenti' placeholder=' Shkruaj një përgjigje...' autocomplete='off'>
+											<button type='submit' class='btnShto' name='shtoKoment'><i class='fa fa-plus-square fa-lg'></i> Përgjigju</button>
 										</form>";
 								echo "<form action='post.php' method='get'><p>
 											<button type='submit' class='btnShto' name='nr' value='$id_posti'><i class='fa fa-expand'></i> Hap postin</button></p>
@@ -90,7 +93,6 @@ require 'includes/shtoKoment.php';
 					}
 
 				?>
-
 
 
 		</div><!-- shfaqja e permbajtjes se postimit -->

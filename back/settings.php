@@ -11,11 +11,11 @@ require 'includes/ndryshoFjalekalim.php';
 		
 		
 		<form action="#" method="post">
-			<p><input type="text" name="newFjalekalim" placeholder="Fjalekalimi i ri" <?php if (isset($_COOKIE[$id_perdorues]) && ($_COOKIE[$id_perdorues]==1 || $_COOKIE[$id_perdorues]==2))
+			<p><input type="text" name="newFjalekalim" placeholder="Fjalëkalimi i ri" <?php if (isset($_COOKIE[$id_perdorues]) && ($_COOKIE[$id_perdorues]==1 || $_COOKIE[$id_perdorues]==2))
 						echo "disabled"; ?>></p>
-			<p><input type="text" name="newFjalekalim2" placeholder="Konfirmo fjalekalimin" <?php if (isset($_COOKIE[$id_perdorues]) && ($_COOKIE[$id_perdorues]==1 || $_COOKIE[$id_perdorues]==2))
+			<p><input type="text" name="newFjalekalim2" placeholder="Konfirmo fjalëkalimin" <?php if (isset($_COOKIE[$id_perdorues]) && ($_COOKIE[$id_perdorues]==1 || $_COOKIE[$id_perdorues]==2))
 						echo "disabled"; ?>></p>
-			<p><input type="text" name="oldFjalekalim" placeholder="Fjalekalimi i vjeter" <?php if (isset($_COOKIE[$id_perdorues]) && ($_COOKIE[$id_perdorues]==1 || $_COOKIE[$id_perdorues]==2))
+			<p><input type="text" name="oldFjalekalim" placeholder="Fjalëkalimi i vjeter" <?php if (isset($_COOKIE[$id_perdorues]) && ($_COOKIE[$id_perdorues]==1 || $_COOKIE[$id_perdorues]==2))
 						echo "disabled"; ?>></p>
 			<p><input type="submit" name="ndrysho" value="Ndrysho" <?php if (isset($_COOKIE[$id_perdorues]) && ($_COOKIE[$id_perdorues]==1 || $_COOKIE[$id_perdorues]==2))
 						echo "disabled"; ?>></p>
@@ -27,17 +27,37 @@ require 'includes/ndryshoFjalekalim.php';
 				<?php
 					if(isset($_COOKIE[$id_perdorues])){
 						if ($_COOKIE[$id_perdorues]==1) {
-							echo "Fjalekalimi u ndryshua me sukses!";
+							echo "Fjalëkalimi u ndryshua me sukses!";
 							setcookie($id_perdorues, 2, time()+3600);
 						}
 						else if ($_COOKIE[$id_perdorues]==2) 
-							echo "Fjalekalimi smund te ndryshohet perseri brenda nje ore!";
+							echo "Fjalëkalimi s'mund të ndryshohet përsëri brenda një orë!";
 
 						else echo $_COOKIE[$id_perdorues];
 					}
 				?>
 			</p>
 		
+
+			<?php 
+		if($perdorues['id_roli']==4){
+	?>
+			<p><a href="adminInfoKamp.php">Shiko të dhënat mbi regjistrimet në kamp</a><br></p>
+			<p><a href="adminResetGrup.php">Reseto grupe</a><br></p>
+			<p><a href="adminFshiGrup.php">Fshi grupe</a><br></p>
+			<p><a href="adminKonfirmoMesues.php">Kërkesat për mësues</a>
+
+			<?php
+				$query="select id_perdorues from perdorues where id_roli=3 ";
+				$result=mysqli_query($connection, $query);
+				$num=mysqli_num_rows($result);
+				echo "<span style='color: red;'><strong> +$num </strong></span>";
+			?>
+
+			<br></p>
+	<?php 
+		} 
+	?>
 		
 	</div><!-- mbyllja e kolones gjigande te posteve -->
 

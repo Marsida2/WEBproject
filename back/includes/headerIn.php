@@ -14,10 +14,10 @@ if(isset($_SESSION['id_perdorues'])){
 <head>
 	<title>TALENTI<em>im</em></title>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts/font-faces.css">
 	<link rel="stylesheet" type="text/css" href="css/loggedIn.css">
+	<script type="text/javascript" src="js/ngjyrosSearch.js"></script>
 
 
 </head>
@@ -31,8 +31,8 @@ if(isset($_SESSION['id_perdorues'])){
 <!-- implementimi i search-it  -->
 	<div class="search">
 		<form action="kerkim.php" method="get" name="frmKerko">
-			<input type="text" name="kerkim" placeholder="Kerko..." autocomplete="off" id="kerko_inputin">
-			<button type="submit" class="btnKerkimi">s
+			<input type="text" name="kerkim" placeholder="Kërko..." autocomplete="off" id="kerko_inputin">
+			<button type="submit" class="btnKerkimi">
 				<i class="fa fa-search fa-lg"></i>
 			</button>
 		</form>
@@ -59,16 +59,16 @@ if(isset($_SESSION['id_perdorues'])){
 	<div class="teDhenaPersonale column">
 		<a href="#"><img class="fotoProfili" src="foto/alfabeti/<?php echo $perdorues['fotoProfili']; ?>" alt="fotoja e profilit"></a>
 		<p>
-			<?php echo $perdorues['emri']." ".$perdorues['mbiemri'] ?>
+			<?php echo "<strong>". $perdorues['emri']." ".$perdorues['mbiemri']."</strong>" ?>
 		</p>	
 		<p>
-			<?php echo "<strong>Perdoruesi:</strong><br>".$perdorues['username']; ?>
+			<?php echo "<strong>Username:</strong><br>".$perdorues['username']; ?>
 		</p>
 		<p>
 			<?php echo "<strong>Email:</strong><br>".$perdorues['email']?>
 		</p>		
 		<p>
-			<?php echo "<strong>Datelindja:</strong><br>".$perdorues['datelindja']?>
+			<?php echo "<strong>Datëlindja:</strong><br>".$perdorues['datelindja']?>
 		</p>
 		<p>
 			<?php 

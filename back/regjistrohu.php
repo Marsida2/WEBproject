@@ -1,7 +1,6 @@
  <?php
 require 'includes/connection.php';
 require 'includes/registerHandler.php';
-require 'includes/loginHandler.php';
 ?>
 
 
@@ -20,23 +19,20 @@ require 'includes/loginHandler.php';
 <img id="gif" src="foto/kamp2.jpg">
 <div class="centerDiv">
 		<div class="titullDiv">
-			<h1 class="titull">TALENTI<em>im</em></h1>
+			<h1 class="titull"><a href="index.php">TALENTI<em>im</em></a></h1>
 		</div>
-	
-
-
-	
+		
 	<form action="#" method="post">
 
 			<div id="second" style="display: block;">
 				<div class="labelat">
 					<p><label for="emri">Emri </label></p>
 					<p><label for="mbiemri">Mbiemri </label></p>
-					<p><label for="datelindja">Datelindja </label></p>
+					<p><label for="datelindja">Datëlindja </label></p>
 					<p><label>Gjinia</br></label></p>
 					<p><label for="email">Email </label></p>
-					<p><label for="fjalekalimi">Fjalekalimi </label></p>
-					<p><label for="fjalekalimi2">Konfirmo fjalekalimin</br></br> </label></p>
+					<p><label for="fjalekalimi">Fjalëkalimi </label></p>
+					<p><label for="fjalekalimi2">Konfirmo fjalëkalimin</br></br> </label></p>
 				</div>
 
 				<div class="inputet">
@@ -55,11 +51,11 @@ require 'includes/loginHandler.php';
 
 
 				<div class="fundDiv">
-					<p>Deshironi te regjistroheni si: <select name="roli">
-														<option value="1" selected>nxenes</option>
-														<option value="3">mesues</option>
+					<p>Dëshironi të regjistroheni si: <select name="roli">
+														<option value="1" selected>nxënës</option>
+														<option value="3">mësues</option>
 													</select></p>
-					<p>Kursi i deshiruar: <select name="grupi">
+					<p>Kursi i dëshiruar: <select name="grupi">
 						<?php
 							$query_lexo="select * from grupet order by id_grupi";
 							$result=mysqli_query($connection, $query_lexo);
@@ -88,8 +84,6 @@ require 'includes/loginHandler.php';
 				<p><input type="text" name="username" size="20" disabled value="
 					<?php 
 						if(isset($_POST['emri'])) echo "vendosur"; else echo "gabim";
-						require 'includes/usernameGen.php';
-						echo $username;
 					?>"></p>
 				<p><input type="text" placeholder="1111-2222-3333-4444" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required></p>
 				<p><input type="password" size="5"></p> 

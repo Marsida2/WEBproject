@@ -3,8 +3,6 @@ require 'includes/connection.php';
 
 if(!isset($_SESSION['shporta']))
     $_SESSION['shporta'] = array();
-require 'includes/shtoShporte.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +14,6 @@ require 'includes/shtoShporte.php';
 	<link rel="stylesheet" type="text/css" href="css/fonts/font-faces.css">
 	<link rel="stylesheet" type="text/css" href="css/loggedIn.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<script type="text/javascript" src="js/mouseMove.js"></script>
-	<script type="text/javascript" src="js/shikoTeGjitha.js"></script>
 
 </head>
 <body>

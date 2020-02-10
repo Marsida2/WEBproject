@@ -1,4 +1,6 @@
 <?php require 'includes/headerIndex.php'; ?>
+<script type="text/javascript" src="js/mouseMove.js"></script>
+<script type="text/javascript" src="js/shikoTeGjitha.js"></script>
 
 	<table id="tabela">
 			<tbody id="telajo">
@@ -20,6 +22,7 @@
 			$i=0;
 			for($i; $i<$nr && $i<3; $i++){
 				$row=mysqli_fetch_assoc($result);
+
 		?>
 					<div class="grupi">
 						<img src="foto/kampet/<?php echo $row['foto_grupi']; ?>" class="foto_grupi">
@@ -62,12 +65,13 @@
 		<?php
 				if($i!=$nr-1) echo "<hr>";
 			}
+			mysqli_close($connection); 
+
 		?>
 
 		</div>
 
 	</div><!--wrapperi-->
-<?php //include 'includes/fundi.php'; ?>
 
 </body>
 </html> 

@@ -1,14 +1,13 @@
 <?php require 'includes/headerIndex.php'; ?>
 <script type="text/javascript" src="js/llogaritTotal.js"></script>
 <style type="text/css">
-	a#shporta {    color: black; }
+	a#shporta { color: black; }
 </style>>
 
 
 	<div class="wrapper">
 		<h1>SHPORTA E KRAHASIMIT</h1>
-		<p>Ju keni <?php echo count($_SESSION['shporta']); echo count($_SESSION['shporta'])==1? " grup ": " grupe ";?>ne shporte.</p>
-
+		<p>Ju keni <?php echo count($_SESSION['shporta']); echo count($_SESSION['shporta'])==1? " grup ": " grupe ";?>ne shportë.</p>
 
 	<?php 
 		if(count($_SESSION['shporta'])!=0){
@@ -48,6 +47,12 @@
 	</form>
 	<?php 
 		}
+
+		if (isset($_GET['Regjistrohu'])) {
+			$_SESSION['id_grupi_zgjedhur']=$_GET['id_grupi_zgjedhur'];
+			header("Location: regjistrohu.php");	
+		}
+
 	?>
 
 	</div><!--wrapperi-->

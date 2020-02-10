@@ -39,6 +39,18 @@ body{
     border-bottom: 0.5px solid #0d4754;
 }
 
+.titull a {
+	text-decoration: none;
+	color: #0d4754;
+}
+
+.titull a:hover {
+	color: black;
+}
+
+.titull a:active {
+	color: white;
+}
 
 .labelat {
 	width: 40%;

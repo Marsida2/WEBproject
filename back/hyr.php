@@ -4,7 +4,6 @@ require 'includes/registerHandler.php';
 require 'includes/loginHandler.php';
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +20,7 @@ require 'includes/loginHandler.php';
 <img id="gif" src="foto/kamp2.jpg">
 <div class="centerDiv">
 		<div class="titullDiv">
-			<h1 class="titull">TALENTI<em>im</em></h1>
+			<h1 class="titull"><a href="index.php">TALENTI<em>im</em></a></h1>
 		</div>
 	
 
@@ -32,7 +31,7 @@ require 'includes/loginHandler.php';
 
 				<div class="labelat">
 					<p><label for="username">Username </label></p>
-					<p><label for="password">Fjalekalimi </label></p>
+					<p><label for="password">Fjalëkalimi </label></p>
 				</div>
 
 				<div class="inputet">
@@ -45,7 +44,7 @@ require 'includes/loginHandler.php';
 					<p id="pGabim"><?php if($gabimLogin==true) echo "<em>⚠ Username ose Fjalekalim i pasakte.</em>"; ?>
 					</p>
 					<p id="pOse">ose</p>
-				<p><a id="link1" href="#">Kliko ketu per te krijuar nje profil</a></p>
+				<p><a id="link1" href="#">Kliko këtu për të krijuar një profil</a></p>
 				</div>
 
 			</div>
@@ -63,11 +62,11 @@ require 'includes/loginHandler.php';
 				<div class="labelat">
 					<p><label for="emri">Emri </label></p>
 					<p><label for="mbiemri">Mbiemri </label></p>
-					<p><label for="datelindja">Datelindja </label></p>
+					<p><label for="datelindja">Datëlindja </label></p>
 					<p><label>Gjinia</br></label></p>
 					<p><label for="email">Email </label></p>
-					<p><label for="fjalekalimi">Fjalekalimi </label></p>
-					<p><label for="fjalekalimi2">Konfirmo fjalekalimin</br></br> </label></p>
+					<p><label for="fjalekalimi">Fjalëkalimi </label></p>
+					<p><label for="fjalekalimi2">Konfirmo fjalëkalimin</br></br> </label></p>
 				</div>
 
 				<div class="inputet">
@@ -86,11 +85,11 @@ require 'includes/loginHandler.php';
 
 
 				<div class="fundDiv">
-					<p>Deshironi te regjistroheni si: <select name="roli">
-														<option value="1" selected>nxenes</option>
-														<option value="3">mesues</option>
+					<p>Dëshironi të regjistroheni si: <select name="roli">
+														<option value="1" selected>nxënës</option>
+														<option value="3">mësues</option>
 													</select></p>
-					<p>Kursi i deshiruar: <select name="grupi">
+					<p>Kursi i dëshiruar: <select name="grupi">
 									<?php
 										$query_lexo="select * from grupet order by id_grupi";
 										$result=mysqli_query($connection, $query_lexo);
@@ -101,7 +100,7 @@ require 'includes/loginHandler.php';
 									?></select></p>
 					<input type="button" id="vazhdo" name="vazhdo" value="Vazhdo"><br>
 
-					<p id="plink"><a id="link2" href="#">Kliko ketu nese ke tashme nje profil</a></p>
+					<p id="plink"><a id="link2" href="#">Kliko këtu nëse ke tashmë një profil</a></p>
 				</div>	
 		</div>
 

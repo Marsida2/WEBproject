@@ -38,6 +38,8 @@ if(isset($_POST['posto'])){
     $query = "insert into poste values('', '$idGrupi', '$idPerd', '$data', '$titulli', '$permbajtja', '$imageName')";
     $result=mysqli_query($connection,$query);
     if(!$result) echo "Deshtoi query i hedhjes se postimit ne databaze!";
+
+	header("Location: indexIn.php");
 }
 
 ?>

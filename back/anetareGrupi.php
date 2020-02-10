@@ -6,7 +6,7 @@ require 'includes/headerIn.php';
 
 <!-- kolona e dyte me vendin e postimeve -->
 	<div class="postimet column ">
-		<h4><em><strong>Anetaret e grupit:</strong></em></h4>
+		<h4><em><strong>Anëtarët e grupit:</strong></em></h4>
 		<br>
 
 		<?php 

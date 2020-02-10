@@ -1,4 +1,6 @@
-<?php require 'includes/headerIndex.php'; ?>
+<?php 
+require 'includes/headerIndex.php'; 
+?>
 
 	<div class="wrapper">
 
@@ -20,12 +22,22 @@
 							<p><form action="#" method="get">
 								<input type="hidden" name="id_gr" value="<?php echo $row['id_grupi']; ?>">
 								<button type="submit" name="shtoShporte"
-									<?php if(isset($_SESSION['shporta'])) {
+									<?php 
+									//kodi per te bere disable butonin
+									if(isset($_SESSION['shporta'])) {
 										$j=0;
-											for($j; $j<count($_SESSION['shporta']); $j++)
-												if($_SESSION['shporta'][$j]==$row['id_grupi'])
-													echo " disabled";
-											}
+										for($j; $j<count($_SESSION['shporta']); $j++)
+											if($_SESSION['shporta'][$j]==$row['id_grupi'])
+												echo " disabled";
+										}
+
+									//kodi per shtimin ne shporte
+									if(isset($_GET['shtoShporte'])){
+										extract($_GET);
+										array_push($_SESSION['shporta'],$id_gr);
+										header("Location: grupi.php?id_gr=$id_gr");
+										}
+
 									?>
 								><i class="fa fa-cart-plus fa-lg"></i> Shto ne shporte</button>
 							</form></p>
